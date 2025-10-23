@@ -1068,8 +1068,10 @@ const QuizApp = () => {
 
   // Initialize shuffled questions on mount
   useEffect(() => {
-    const shuffled = questions.map(q => shuffleQuestion(q));
-    setShuffledQuestions(shuffled);
+    // First shuffle the questions order, then shuffle each question's options
+    const shuffledQuestionOrder = shuffleArray(questions);
+    const shuffledWithOptions = shuffledQuestionOrder.map(q => shuffleQuestion(q));
+    setShuffledQuestions(shuffledWithOptions);
   }, []);
 
   const handleAnswer = (optionIndex) => {
@@ -1095,8 +1097,10 @@ const QuizApp = () => {
     setShowResults(false);
     setQuizComplete(false);
     setIsRetakeWrong(false);
-    const shuffled = questions.map(q => shuffleQuestion(q));
-    setShuffledQuestions(shuffled);
+    // Shuffle both question order and answer options
+    const shuffledQuestionOrder = shuffleArray(questions);
+    const shuffledWithOptions = shuffledQuestionOrder.map(q => shuffleQuestion(q));
+    setShuffledQuestions(shuffledWithOptions);
   };
 
   const handleRetakeWrong = () => {
