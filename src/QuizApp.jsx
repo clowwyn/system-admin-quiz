@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, AlertCircle } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, AlertCircle, Home } from 'lucide-react';
 
-const QuizApp = () => {
+const QuizApp = ({ onBackToHome }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -1190,6 +1190,14 @@ const QuizApp = () => {
                 Practice Wrong Answers ({wrongCount})
               </button>
             )}
+            
+            <button
+              onClick={onBackToHome}
+              className="restart-button"
+            >
+              <Home size={20} />
+              Back to Home
+            </button>
           </div>
         </div>
       </div>
@@ -1221,6 +1229,12 @@ const QuizApp = () => {
             />
           </div>
         </div>
+
+        {/* Back to Home Button */}
+        <button onClick={onBackToHome} className="back-home-button">
+          <Home size={16} />
+          Back to Home
+        </button>
 
         {/* Question */}
         <div className="question-section">
