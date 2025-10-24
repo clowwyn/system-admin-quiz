@@ -13,109 +13,109 @@ const SituationalQuiz = ({ onBackToHome }) => {
       id: 1,
       scenario: "A user calls reporting that they cannot access their shared network drive. Other users can access it fine. What is your first troubleshooting step?",
       options: [
-        "Restart the file server immediately",
-        "Check the user's network connectivity and drive mappings",
-        "Reinstall the user's operating system",
-        "Reset the user's password"
+        "Check the user's cached credentials and re-authenticate to the domain",
+        "Verify network connectivity, drive mappings, and user permissions",
+        "Clear the user's DNS cache and renew their IP address",
+        "Check if the user's account is locked out or password expired"
       ],
       correct: 1,
-      explanation: "Always start with the simplest checks first. Verify network connectivity and drive mappings before escalating to more complex solutions."
+      explanation: "Always start with the simplest checks first. Verify network connectivity, drive mappings, and permissions before checking authentication issues."
     },
     {
       id: 2,
       scenario: "Your company's email server is running out of disk space and users are complaining about slow email performance. What should you do first?",
       options: [
-        "Delete all emails older than 30 days",
-        "Buy more storage immediately",
-        "Analyze disk usage and identify large files/logs for cleanup",
-        "Restart the email server"
+        "Enable circular logging and compress existing transaction logs",
+        "Implement mailbox quotas and archive old emails to PST files",
+        "Analyze disk usage, check transaction logs, and plan immediate cleanup",
+        "Move the email database to a different drive with more space"
       ],
       correct: 2,
-      explanation: "Analyze the situation first. Check what's consuming space (logs, attachments, databases) before taking action or purchasing hardware."
+      explanation: "Analyze the situation first. Check what's consuming space (transaction logs, databases, attachments) and plan systematic cleanup before implementing long-term solutions."
     },
     {
       id: 3,
       scenario: "A critical business application crashes every day at 2 PM. Users are getting frustrated. What's your systematic approach?",
       options: [
-        "Restart the application every day at 1:30 PM",
-        "Check system logs, resource usage, and scheduled tasks around 2 PM",
-        "Reinstall the application",
-        "Tell users to avoid using it at 2 PM"
+        "Analyze application and system event logs, check for memory leaks and scheduled processes",
+        "Monitor CPU and memory usage patterns, review application dependencies and database connections",
+        "Check for antivirus scans, backup jobs, or maintenance tasks scheduled at 2 PM",
+        "Review application logs for error patterns and correlate with system resource utilization"
       ],
-      correct: 1,
-      explanation: "Investigate the root cause by examining logs, resource usage, and any scheduled tasks that might be causing conflicts at that specific time."
+      correct: 0,
+      explanation: "Start with comprehensive log analysis and memory leak detection, as daily crashes at specific times often indicate resource exhaustion or conflicting processes."
     },
     {
       id: 4,
       scenario: "You discover that a former employee still has active accounts in multiple systems 3 months after leaving. What should you do?",
       options: [
-        "Leave the accounts active in case they return",
-        "Immediately disable all accounts and document the security incident",
-        "Only disable the main domain account",
-        "Change the passwords but keep accounts active"
+        "Disable accounts, audit access logs for unauthorized activity, and review data access permissions",
+        "Document the incident, disable all accounts, and conduct a security audit of accessed systems",
+        "Immediately revoke all access, change shared passwords, and notify security team",
+        "Disable accounts, review offboarding procedures, and implement automated account lifecycle management"
       ],
       correct: 1,
-      explanation: "This is a security risk. Immediately disable all accounts, document the incident, and review your offboarding procedures to prevent this in the future."
+      explanation: "This is a critical security incident requiring immediate documentation, account disabling, and comprehensive security audit to determine potential data exposure."
     },
     {
       id: 5,
       scenario: "Your backup system shows a failed backup for the third consecutive night. The backup window is during business hours tomorrow. What do you do?",
       options: [
-        "Wait until tomorrow night to try again",
-        "Immediately investigate the failure and attempt manual backup if needed",
-        "Skip the backup since you have last week's backup",
-        "Run the backup during business hours"
+        "Investigate backup logs, check storage capacity, and run differential backup during low-usage hours",
+        "Analyze backup failure logs, verify tape/disk integrity, and coordinate emergency backup window",
+        "Check backup agent status, validate network connectivity, and attempt incremental backup",
+        "Review backup job configuration, test backup media, and schedule immediate manual backup"
       ],
       correct: 1,
-      explanation: "Three consecutive failures indicate a serious problem. Investigate immediately and consider manual backup to ensure data protection."
+      explanation: "Three consecutive failures require immediate investigation of logs and media integrity, with coordination for emergency backup to prevent data loss."
     },
     {
       id: 6,
       scenario: "A department head requests admin rights on their computer to install software. Company policy prohibits this. How do you handle it?",
       options: [
-        "Grant admin rights since they're a department head",
-        "Explain the policy, offer to install approved software, and escalate if needed",
-        "Ignore the request",
-        "Give temporary admin rights for one day"
+        "Implement RunAs with elevated credentials for specific software installation only",
+        "Explain policy, evaluate software through change management, offer centralized installation",
+        "Create a separate admin account with time-limited access and audit logging",
+        "Use application virtualization to provide software access without admin rights"
       ],
       correct: 1,
-      explanation: "Follow company policy while providing good customer service. Offer alternatives and escalate through proper channels if necessary."
+      explanation: "Follow policy while providing service: evaluate through proper change management, offer centralized installation, and maintain security standards."
     },
     {
       id: 7,
       scenario: "Your monitoring system alerts you that CPU usage on the database server has been at 95% for the past hour. What's your immediate action?",
       options: [
-        "Restart the database server immediately",
-        "Check running processes, active connections, and recent changes",
-        "Upgrade the server hardware",
-        "Wait to see if it resolves itself"
+        "Analyze query execution plans, check for blocking processes, and review recent index changes",
+        "Monitor active database connections, identify long-running queries, and check tempdb usage",
+        "Review database statistics, analyze wait types, and check for parameter sniffing issues",
+        "Check for runaway queries, examine connection pooling, and analyze recent schema changes"
       ],
       correct: 1,
-      explanation: "Investigate what's causing the high CPU usage. Check for runaway processes, unusual queries, or recent changes before taking drastic action."
+      explanation: "High CPU requires systematic analysis: monitor connections, identify resource-intensive queries, and check tempdb utilization patterns."
     },
     {
       id: 8,
       scenario: "A user reports their computer is 'running very slowly' since yesterday. What's your diagnostic approach?",
       options: [
-        "Immediately reimage the computer",
-        "Check Task Manager, recent software installs, and run antivirus scan",
-        "Tell them to restart and call back if it persists",
-        "Upgrade their RAM"
+        "Check Event Viewer for system errors, analyze startup programs, and review recent Windows updates",
+        "Monitor CPU and memory usage patterns, check for malware, and analyze disk I/O performance",
+        "Review installed programs, check browser extensions, and analyze network connectivity issues",
+        "Examine running processes, check hard drive health with SMART data, and review system file integrity"
       ],
       correct: 1,
-      explanation: "Systematically diagnose: check resource usage, recent changes, malware, and startup programs before considering hardware solutions."
+      explanation: "Performance issues require systematic analysis: monitor resource usage patterns, check for malware, and analyze disk I/O bottlenecks."
     },
     {
       id: 9,
       scenario: "You need to apply critical security patches to 50 servers, but some run 24/7 production applications. What's your approach?",
       options: [
-        "Apply patches immediately to all servers",
-        "Skip patching the production servers",
-        "Plan maintenance windows, test patches, and coordinate with stakeholders",
-        "Apply patches only to non-production servers"
+        "Implement rolling updates with load balancer failover and automated rollback procedures",
+        "Test patches in staging, schedule maintenance windows, coordinate with business stakeholders",
+        "Use cluster-aware updating with live migration and health monitoring validation",
+        "Deploy patches to secondary nodes first, validate functionality, then update primary nodes"
       ],
-      correct: 2,
-      explanation: "Balance security with business continuity. Plan maintenance windows, test patches in a staging environment, and coordinate with business stakeholders."
+      correct: 1,
+      explanation: "Critical patches require systematic approach: test in staging, coordinate maintenance windows, and ensure business continuity through proper planning."
     },
     {
       id: 10,
