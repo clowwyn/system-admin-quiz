@@ -248,6 +248,366 @@ const SituationalQuiz = ({ onBackToHome }) => {
       ],
       correct: 1,
       explanation: "Potential phishing is a security incident. Alert security team, analyze the threat, implement blocks, and educate all users about the threat."
+    },
+    {
+      id: 21,
+      scenario: "Your organization's main printer suddenly stops working during a busy period. Multiple departments are affected. What's your troubleshooting priority?",
+      options: [
+        "Order a new printer immediately",
+        "Check power, connections, print queue, and driver status systematically",
+        "Tell everyone to email documents instead",
+        "Restart all computers connected to the printer"
+      ],
+      correct: 1,
+      explanation: "Follow systematic troubleshooting: check physical connections, power, print spooler service, and drivers before escalating to hardware replacement."
+    },
+    {
+      id: 22,
+      scenario: "A department head wants to install personal software on their work computer for a hobby project. How do you handle this request?",
+      options: [
+        "Install it since they're management",
+        "Explain company policy and offer alternatives like personal VM or separate device",
+        "Install it but monitor their usage",
+        "Report them to HR for inappropriate use"
+      ],
+      correct: 1,
+      explanation: "Maintain policy compliance while being helpful. Explain risks and offer appropriate alternatives that meet their needs without compromising security."
+    },
+    {
+      id: 23,
+      scenario: "Your monitoring shows unusual database query patterns at 3 AM when no one should be working. What should you investigate first?",
+      options: [
+        "Assume it's automated maintenance",
+        "Check for unauthorized access, scheduled jobs, and review access logs",
+        "Disable the database temporarily",
+        "Change all database passwords"
+      ],
+      correct: 1,
+      explanation: "Unusual access patterns could indicate security breaches. Investigate access logs, check for unauthorized users, and review scheduled tasks."
+    },
+    {
+      id: 24,
+      scenario: "A critical business application is running slowly for all users. CPU and memory usage appear normal. What's your next diagnostic step?",
+      options: [
+        "Restart the application server",
+        "Check network latency, database performance, and disk I/O",
+        "Add more RAM to the server",
+        "Tell users to be patient"
+      ],
+      correct: 1,
+      explanation: "When CPU/memory are normal but performance is poor, check network connectivity, database queries, and storage performance."
+    },
+    {
+      id: 25,
+      scenario: "You discover that backups have been failing silently for 2 weeks due to insufficient storage space. What's your immediate action plan?",
+      options: [
+        "Buy more storage and resume backups",
+        "Free up space, run manual backup, investigate why alerts failed, then expand storage",
+        "Delete old backups to make room",
+        "Wait until next week's scheduled maintenance"
+      ],
+      correct: 1,
+      explanation: "Address the immediate risk by freeing space and running manual backup, investigate alert failure, then implement long-term storage solution."
+    },
+    {
+      id: 26,
+      scenario: "A new employee needs access to 5 different systems on their first day, but you only have approval for 3. What do you do?",
+      options: [
+        "Give access to all 5 systems anyway",
+        "Provide approved access and escalate remaining requests through proper channels",
+        "Give them guest access to everything",
+        "Tell them to wait until next week"
+      ],
+      correct: 1,
+      explanation: "Follow security protocols by providing approved access immediately and working through proper approval channels for additional access."
+    },
+    {
+      id: 27,
+      scenario: "Users report that file transfers to the server are extremely slow, but web browsing is normal. What should you check?",
+      options: [
+        "Restart the internet router",
+        "Check server disk space, network utilization, and file server performance",
+        "Upgrade everyone's internet connection",
+        "Tell users to transfer files at night"
+      ],
+      correct: 1,
+      explanation: "Slow file transfers with normal web browsing suggests server-side issues. Check server resources, network congestion, and file server health."
+    },
+    {
+      id: 28,
+      scenario: "Your company's website was defaced by hackers. The CEO wants it fixed immediately. What's your response priority?",
+      options: [
+        "Restore from backup immediately",
+        "Take site offline, preserve evidence, investigate breach, then restore securely",
+        "Just change the homepage back",
+        "Ignore it since it's just cosmetic"
+      ],
+      correct: 1,
+      explanation: "Security incident response: contain the breach, preserve evidence for investigation, identify vulnerabilities, then restore with security improvements."
+    },
+    {
+      id: 29,
+      scenario: "A user accidentally sent confidential company data to a competitor via email. They just realized and called you. What do you do?",
+      options: [
+        "Tell them not to worry about it",
+        "Immediately notify security team, legal, and management; document the incident",
+        "Ask them to call the competitor to delete it",
+        "Delete the email from their sent folder"
+      ],
+      correct: 1,
+      explanation: "Data breach incident requires immediate escalation to security, legal, and management teams. Document everything and follow incident response procedures."
+    },
+    {
+      id: 30,
+      scenario: "Your organization is planning to migrate to cloud services. Users are concerned about data security. How do you address this?",
+      options: [
+        "Tell them cloud is always secure",
+        "Provide education on cloud security measures, compliance, and company policies",
+        "Agree that cloud is risky and avoid migration",
+        "Only migrate non-sensitive data"
+      ],
+      correct: 1,
+      explanation: "Address concerns through education about security measures, compliance standards, encryption, and how the organization will maintain security in the cloud."
+    },
+    {
+      id: 31,
+      scenario: "A server's hard drive is at 98% capacity and growing. The server hosts critical databases. What's your immediate action?",
+      options: [
+        "Delete random files to free space",
+        "Analyze disk usage, clean logs/temp files, and plan storage expansion",
+        "Shut down the server",
+        "Compress all files on the drive"
+      ],
+      correct: 1,
+      explanation: "Analyze what's consuming space (logs, temp files, databases), clean safely, and plan immediate storage expansion to prevent system failure."
+    },
+    {
+      id: 32,
+      scenario: "Users report that shared network drives are inaccessible, but they can still access the internet. What's your troubleshooting approach?",
+      options: [
+        "Restart all user computers",
+        "Check file server status, network connectivity, and authentication services",
+        "Reinstall network drivers on all computers",
+        "Reset the network switch"
+      ],
+      correct: 1,
+      explanation: "Network drives failing while internet works suggests file server or authentication issues. Check server status, network paths, and domain authentication."
+    },
+    {
+      id: 33,
+      scenario: "A department wants to use a new software tool that requires admin rights to install. Company policy prohibits this. How do you handle it?",
+      options: [
+        "Grant temporary admin rights",
+        "Evaluate the software, test in sandbox, and install centrally if approved",
+        "Tell them they can't use it",
+        "Let them install it on one computer as a test"
+      ],
+      correct: 1,
+      explanation: "Balance business needs with security by evaluating the software through proper channels, testing safely, and implementing centrally if approved."
+    },
+    {
+      id: 34,
+      scenario: "Your monitoring alerts show that the mail server's CPU has been at 100% for 6 hours. Email delivery is delayed. What do you investigate?",
+      options: [
+        "Restart the mail server immediately",
+        "Check for spam attacks, large attachments, mail queue size, and resource usage",
+        "Disable email temporarily",
+        "Add more CPU to the server"
+      ],
+      correct: 1,
+      explanation: "High CPU on mail server could indicate spam attacks, large mail queues, or resource issues. Investigate the cause before taking action."
+    },
+    {
+      id: 35,
+      scenario: "A user reports their computer is infected with malware. Other users nearby are concerned. What's your immediate response?",
+      options: [
+        "Tell other users not to worry",
+        "Isolate infected computer, run security scan, and check network for spread",
+        "Reimage the computer immediately",
+        "Install antivirus on all nearby computers"
+      ],
+      correct: 1,
+      explanation: "Contain the infection by isolating the computer, assess the threat, check for network spread, then clean or reimage as appropriate."
+    },
+    {
+      id: 36,
+      scenario: "Your organization's internet connection is working but very slow during business hours. What should you investigate?",
+      options: [
+        "Upgrade the internet plan immediately",
+        "Check bandwidth usage, identify heavy users/applications, and analyze traffic patterns",
+        "Restart the router every hour",
+        "Block all streaming websites"
+      ],
+      correct: 1,
+      explanation: "Analyze bandwidth usage to identify what's consuming capacity. Look for heavy applications, unauthorized usage, or network issues before upgrading."
+    },
+    {
+      id: 37,
+      scenario: "A critical server shows memory usage at 95% consistently. Applications are starting to crash. What's your approach?",
+      options: [
+        "Restart the server during business hours",
+        "Identify memory-consuming processes, check for leaks, plan memory upgrade",
+        "Kill random processes to free memory",
+        "Ignore it since 95% isn't 100%"
+      ],
+      correct: 1,
+      explanation: "Identify what's consuming memory, check for memory leaks, optimize applications, and plan hardware upgrade during appropriate maintenance window."
+    },
+    {
+      id: 38,
+      scenario: "Users report that the company intranet is down, but external websites work fine. What's your troubleshooting priority?",
+      options: [
+        "Restart all user computers",
+        "Check internal web server, DNS settings, and internal network connectivity",
+        "Contact the internet service provider",
+        "Reinstall web browsers on all computers"
+      ],
+      correct: 1,
+      explanation: "Internal sites down while external sites work indicates internal server or DNS issues. Check web server status and internal network configuration."
+    },
+    {
+      id: 39,
+      scenario: "A user accidentally deleted an entire folder of important project files. They need it recovered urgently for a client meeting in 1 hour. What do you do?",
+      options: [
+        "Tell them the files are gone forever",
+        "Check recycle bin, shadow copies, and recent backups in order of speed",
+        "Restore the entire server from last night's backup",
+        "Ask the client to reschedule the meeting"
+      ],
+      correct: 1,
+      explanation: "Work through recovery options from fastest to slowest: recycle bin, shadow copies/previous versions, then targeted backup restoration."
+    },
+    {
+      id: 40,
+      scenario: "Your organization is implementing new security policies that require complex passwords. Users are complaining and asking for exceptions. How do you respond?",
+      options: [
+        "Grant exceptions to avoid complaints",
+        "Explain security importance, provide password manager training, and enforce consistently",
+        "Implement the policy only for IT staff",
+        "Delay implementation until users are happier"
+      ],
+      correct: 1,
+      explanation: "Security policies must be enforced consistently. Provide education, training on password managers, and support while maintaining security standards."
+    },
+    {
+      id: 41,
+      scenario: "A power outage affected your data center. Servers are back online but some services aren't starting automatically. What's your systematic approach?",
+      options: [
+        "Restart all servers again",
+        "Check service dependencies, start core services first, then dependent services",
+        "Wait for everything to start automatically",
+        "Call the power company to complain"
+      ],
+      correct: 1,
+      explanation: "Follow service dependency order: start core infrastructure services (DNS, DHCP, domain controllers) first, then application services that depend on them."
+    },
+    {
+      id: 42,
+      scenario: "Users report that video conferences are choppy and audio cuts out frequently. Other network applications work fine. What should you investigate?",
+      options: [
+        "Upgrade everyone's computers",
+        "Check network QoS settings, bandwidth allocation, and video conferencing server performance",
+        "Tell users to use phone calls instead",
+        "Restart the internet connection"
+      ],
+      correct: 1,
+      explanation: "Video conferencing issues while other apps work suggests QoS, bandwidth prioritization, or video server problems. Check network configuration and server performance."
+    },
+    {
+      id: 43,
+      scenario: "A user reports they can't log into their computer. They say they haven't changed their password. What's your troubleshooting sequence?",
+      options: [
+        "Reset their password immediately",
+        "Check account lockout status, recent password changes, and domain connectivity",
+        "Reimage their computer",
+        "Tell them to try again later"
+      ],
+      correct: 1,
+      explanation: "Check account status first: lockouts, expiration, domain connectivity. Verify the issue before resetting passwords or taking drastic action."
+    },
+    {
+      id: 44,
+      scenario: "Your backup verification test shows that 15% of files are corrupted and can't be restored. What's your immediate action plan?",
+      options: [
+        "Assume 85% success rate is acceptable",
+        "Investigate backup media, check for hardware issues, and run new full backup",
+        "Switch to a different backup software",
+        "Only backup the files that worked before"
+      ],
+      correct: 1,
+      explanation: "15% corruption rate is critical. Investigate backup media integrity, check for hardware failures, and ensure reliable backup processes before data loss occurs."
+    },
+    {
+      id: 45,
+      scenario: "A department head requests immediate access to another employee's email account to check for important messages while they're on sick leave. How do you respond?",
+      options: [
+        "Grant access immediately since they're management",
+        "Follow proper authorization procedures, involve HR and legal if necessary",
+        "Give read-only access to be safe",
+        "Forward all emails to the department head"
+      ],
+      correct: 1,
+      explanation: "Email access requires proper authorization through HR and legal channels. Privacy laws and company policies must be followed even for management requests."
+    },
+    {
+      id: 46,
+      scenario: "Your organization's main database server is running out of storage space rapidly. It's projected to be full in 2 days. What's your action plan?",
+      options: [
+        "Wait until it's completely full",
+        "Immediately plan storage expansion, archive old data, and implement monitoring",
+        "Delete the oldest records",
+        "Stop all database writes"
+      ],
+      correct: 1,
+      explanation: "Act quickly: plan immediate storage expansion, identify data for archiving, implement better monitoring, and ensure business continuity."
+    },
+    {
+      id: 47,
+      scenario: "Users report that a specific application crashes frequently, but only on certain computers. Other applications work fine on those computers. What do you investigate?",
+      options: [
+        "Reinstall the application on all computers",
+        "Check application compatibility, system requirements, and specific computer configurations",
+        "Replace the problematic computers",
+        "Tell users to avoid using that application"
+      ],
+      correct: 1,
+      explanation: "Application-specific issues on certain computers suggest compatibility problems. Check system requirements, configurations, and environmental differences."
+    },
+    {
+      id: 48,
+      scenario: "Your monitoring system detects unusual outbound network traffic from multiple computers during off-hours. What's your security response?",
+      options: [
+        "Block all outbound traffic",
+        "Investigate for malware, check traffic destinations, and isolate affected systems",
+        "Ignore it since it's after hours",
+        "Restart all computers showing the traffic"
+      ],
+      correct: 1,
+      explanation: "Unusual outbound traffic could indicate malware or data exfiltration. Investigate traffic patterns, destinations, and isolate potentially compromised systems."
+    },
+    {
+      id: 49,
+      scenario: "A user reports that emails are being sent from their account without their knowledge. They're concerned about account compromise. What's your immediate response?",
+      options: [
+        "Tell them to change their password",
+        "Immediately disable account, check for compromise, review sent items, and investigate",
+        "Run antivirus on their computer",
+        "Forward the suspicious emails to spam folder"
+      ],
+      correct: 1,
+      explanation: "Potential account compromise requires immediate containment: disable account, investigate extent of compromise, check for data access, then secure and restore access."
+    },
+    {
+      id: 50,
+      scenario: "Your organization is planning a major software upgrade that will require 4 hours of downtime. How do you minimize business impact?",
+      options: [
+        "Do the upgrade during regular business hours",
+        "Plan upgrade during off-hours, communicate timeline, prepare rollback plan, and test thoroughly",
+        "Upgrade one computer at a time during work hours",
+        "Skip testing to save time"
+      ],
+      correct: 1,
+      explanation: "Minimize impact through careful planning: schedule during off-hours, communicate clearly, prepare rollback procedures, and test thoroughly in staging environment."
     }
   ];
 

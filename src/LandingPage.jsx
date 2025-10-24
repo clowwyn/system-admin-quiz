@@ -62,15 +62,15 @@ const LandingPage = ({ onQuizSelect }) => {
           <div className="stat-item">
             <Award size={24} />
             <div className="stat-content">
-              <span className="stat-number">144+</span>
-              <span className="stat-label">Questions</span>
+              <span className="stat-number">194</span>
+              <span className="stat-label">Total Questions</span>
             </div>
           </div>
           <div className="stat-item">
             <BookOpen size={24} />
             <div className="stat-content">
-              <span className="stat-number">9</span>
-              <span className="stat-label">Weeks Covered</span>
+              <span className="stat-number">50</span>
+              <span className="stat-label">Scenarios</span>
             </div>
           </div>
           <div className="stat-item">
